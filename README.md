@@ -108,7 +108,7 @@ Now that hopefully the environment is up and running, you can start exploring th
 All toolbox methods are found in the `toolbox/` folder. The `__init__.py` file is the main file of the toolbox library which collects all necessary functions for the import of the module. 
 All relevant mehtods of the toolbox can be imported at once by running `import toolbox` at the beginning of your script.
 
-    * Note: The toolbox folder must be in the same location as your script. If your script is in a different location, refer to the Appendix below.
+Note: The toolbox folder must be in the same location as your script. If your script is in a different location, refer to the Appendix below.
 
 
 
