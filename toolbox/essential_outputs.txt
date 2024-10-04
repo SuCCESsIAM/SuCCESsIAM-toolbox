@@ -18,8 +18,8 @@ LU_emis_CropN2O
 LU_clear_pri
 LU_clear_sec
 LU_regen_area
-LU_ NetCO2LandUse
-LU_ NetCO2Terrestrial
+LU_NetCO2LandUse
+LU_NetCO2Terrestrial
 LU_harv_logs
 LU_harv_pulp
 LU_harv_wast
