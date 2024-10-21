@@ -4,7 +4,7 @@ The [SuCCESs model](https://github.com/SuCCESsIAM) is a demand-driven, global sc
 
 Toolbox Authors: Tuukka Mattlar & Nadine-Cyra Freistetter (2024) 
 
-Model Authors: Tommi Ekholm, Nadine-Cyra Freistetter, Aapo Rautiainen, Laura Thölix (2021-2024)
+Model Authors: Tommi Ekholm, Nadine-Cyra Freistetter, Tuukka Mattlar, Theresa Schaber, Aapo Rautiainen (2021-2024)
 
 ## General instructions
 
