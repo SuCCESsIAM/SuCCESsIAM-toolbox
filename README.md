@@ -6,37 +6,50 @@ Toolbox Authors: Tuukka Mattlar & Nadine-Cyra Freistetter (2024)
 
 Model Authors: Tommi Ekholm, Nadine-Cyra Freistetter, Aapo Rautiainen, Laura Thölix (2021-2024)
 
+## General instructions
 
-## Before getting started
+To get a smooth start, please follow the instructions listed in this file which is structured as:
+- Toolbox structure
+    - Describes how the toolbox is structured
+- Requirements for using the toolbox
+    - Describes what installations are required for starting with the toolbox
+- Setup
+    - Instructs the alternatives how to setup the toolbox development environment on your computer
+- Running the code
+    - Explains how to approach the toolbox code if you want to customize it to your own use
+- Appendix
+    - Includes e.g. some troubleshooting advice
+
+. We encourage the use of python virtual environment (venv) and Visual Studio Code (vscode) for smooth use. In installation, the python pa `gdxpds` python library may require a few extra steps
 
 
-### Toolbox structure
+## Toolbox structure
 The SuCCESs Toolbox comes as a folder with python files (.py) and a jupyter notebook file (.ipynb). The folder is of the following structure:
 * Root folder:
     * This `README.md` file with instructions
     * Example SuCCESs results `example.gdx` file
-    * Requirements files `requirements_[python-version].txt` and `success_python_env.yml` for setting up your python environment (instructions below)
+    * Requirements files `requirements.txt` and `success_python_env.yml` for setting up your python environment (instructions below)
     * `toolbox` folder containing the source code for plottinf functions. (Note that all functions exported from this module need to be imported in the `__init__.py` file)
     * `tutorial.ipynb` tutorial to the basic plotting functions included in the toolbox
-    * Some git files
+    * Git files for managing the repository
 
 
 
-### Requirements for using the Toolbox
-1. To run SuCCESs and analyse `.gdx` files in general, you need:
+## Requirements for using the Toolbox
+1. To run SuCCESs, you need:
     * GAMS installed on your computer AND
     * A valid license for GAMS on your computer
 2. Python installed on your computer (developed with version 3.12) and added to PATH (instructions e.g.: https://realpython.com/add-python-to-path/)
 3. Jupyter notebook capability installed if you plan to explore the provided examples
-4. See the requirements in the root folder for the required standard python packages, which include mainly `gdxpds`, `numpy`, `pandas`, `seaborn` and `matplotlib`
-5. The gdx-pandas package `gdxpds` is crucial to import and read .gdx files. It can only be installed via the pip channel and might cause some issues before it works properly (see "GDX-Pandas troubleshooting" in the Appendix below).
+4. Python packages, which include e.g. `gdxpds`, `ipykernel` and `seaborn`
+5. Installing `gdxpds` may require the installation of [C++ Build tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/). [This](https://stackoverflow.com/questions/64261546/how-to-solve-error-microsoft-visual-c-14-0-or-greater-is-required-when-inst) example should help with the installation. If not, please search online for instructions with the error message(s) received in log when trying to  install the package. Note, our understanding is that the `gdxpds` can only be installed via the pip channel.
 
 
 ### Python versions
 The toolbox is developed using Python versions 3.11 and 3.12. Under our understanding the toolbox should run smoothly at least for python versions 3.7-3.12. In all cases, please separately import necessary libraries (as instructed below), if the default method does not work. Once you have the environment up and running there should be no obvious issues with the version control so no worries if it takes a bit time to get create a running environment at first. For `gdxpds` related issues, please refer to the trouble shooting instructions below.
 
 
-## Set up
+## Setup
 
 We will go through the options of setting up the toolbox in:
 * Visual Studio Code (VS Code) and creating a virtual environment (suggested)
@@ -53,8 +66,8 @@ The smoothest implementation for us seemed to be setting up the environment in V
 3. Press `Shift+Ctrl+p` and search for `Python: Create Environment`
 4. Select `create a Venv`
 5. Select the correct version of Python installation on your computer that you wish to use
-6. Select the `requirements_[version].txt` dependencies file and wait for the magic to happen
-    * If you face problems with the package versions, you can also just create an environment without the `requirements_[python-version].txt` and install the dependencies separately. This can be done by right-clicking the just created `.venv` folder in VS code and selecting `Open in Integrated Terminal`, where you can separately install the required dependencies with e.g. pip. For example `pip install numpy`.*
+6. Select the `requirements.txt` dependencies file and wait for the magic to happen
+    * If you face problems with the package versions, you can also just create an environment without the `requirements.txt` and install the dependencies separately. This can be done by right-clicking the just created `.venv` folder in VS code and selecting `Open in Integrated Terminal`, where you can separately install the required dependencies with e.g. pip. For example `pip install numpy`.*
 7. In the git root folder, you should now have a local `.venv` folder forming
     * *If the upper right corner of VS code does not state `.venv Python 3.[your version]`, press `Shift+Ctrl+p` and search for `Python: Select Interpreter`. Either search or directly set it to the recently created `.venv` in your current folder.*
     * *The `.venv` file is **automatically ignored** by git in `.gitignore`. Please keep it that way since the venv folders may face conflicts accross platforms.*
@@ -93,7 +106,7 @@ You probably know what you are doing if you do it this way, but in short:
 1. Make sure you have pip installed
 2. Create a venv where you like
 3. Activate the environment from where you want to run the code
-4. Install dependencies from `requirements.txt` or `success_python_env.yml`, or however you want
+4. Install dependencies from `requirements.txt` or `success_python_env.yml`, or however you want, e.g. by running `pip install -r requirements.txt`
 6. Run `jupyter notebook` in your active venv and locate to the localhost address provided, or just use VS code
 7. Navigate to the code folder using the browser-based jupyter view and open the file you wish, or again, just use VS code
 
@@ -101,7 +114,7 @@ You probably know what you are doing if you do it this way, but in short:
 
 
 
-## Getting the code running
+## Running the code
 Now that hopefully the environment is up and running, you can start exploring the library and examples!
 
 ### Toolbox library

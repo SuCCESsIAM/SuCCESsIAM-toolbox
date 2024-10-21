@@ -1,0 +1,3 @@
+gdxpds
+seaborn
+ipykernel
