@@ -32,6 +32,7 @@ LVST_feed_intake
 LU_CStockTotalVege
 LU_CStockTotalSoil
 LU_CStockTotalLitt
+LU_Cstock_ManagedLand
 LU_CStockVege
 LU_CStockLittHerb
 LU_CStockSoilHerb
